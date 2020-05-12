@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<div id="div1">
+</div>
+<input type="button" value="提交" onclick="getData()">
+<!--同源策略禁止跨域请求-->
+<script>
+    function getData() {
+        $.get("http://localhost:8080/hello",function (mes) {
+            $("#div1").html(mes);
+        });
+    }
+</script>
+</body>
+</html>
